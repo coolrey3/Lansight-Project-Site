@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         dest: 'build/JS/Scripts.js',
       },
       css: {
-        src: ['./css/style1.css', './css/style.css'],
+        src: ['./css/custom_styles.css', './css/style.css', './css/style.css'],
         dest: 'build/CSS/Styles.css',
       },
 
