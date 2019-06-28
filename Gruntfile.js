@@ -23,10 +23,21 @@ module.exports = function(grunt) {
         tasks: ['concat'],
       },
     }
-  });
+
+
+
+
+});
+    sass: {
+      dist: {
+        files:  {'./SASS/style.sass':'./build/CSS/sass.css'}
+        }
+      };
+
 
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.registerTask("default", ['concat', "watch"]);
   grunt.registerTask('speak', function() {
     console.log("im speaking");
