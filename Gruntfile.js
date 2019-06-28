@@ -30,9 +30,9 @@ module.exports = function(grunt) {
 });
     sass: {
       dist: {
-        files:  {'./SASS/style.sass':'./build/CSS/sass.css'}
+        files:  {'./SASS/style.sass';}{'./build/CSS/sass.css';}
         }
-      };
+      }
 
 
   grunt.loadNpmTasks('grunt-contrib-concat');
