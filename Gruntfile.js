@@ -22,17 +22,37 @@ module.exports = function(grunt) {
         files: ['./CSS/**/*.css'],
         tasks: ['concat'],
       },
-    }
+    },
 
+  //   sass: {                              // Task
+  //     dist: {                            // Target
+  //       options: {                       // Target options
+  //         style: 'expanded'
+  //       },
+  //       files: {                         // Dictionary of files
+  //         'main.css': 'main.scss',       // 'destination': 'source'
+  //         'widgets.css': 'widgets.scss'
+  //       }
+  //     }
+  //   }
+  // });
 
-
-
-});
-    sass: {
+  sass: {
       dist: {
-        files:  {'./SASS/style.sass';}{'./build/CSS/sass.css';}
+        files: {
+          'main.css': 'main.scss',
+          'widgets.css': 'widgets.scss'
         }
       }
+    }
+
+});
+    // sass: {
+    //   dist: {
+    //
+    // //     files:  {'./SASS/style.sass';}{'./build/CSS/sass.css';}
+    //         }
+    //       }
 
 
   grunt.loadNpmTasks('grunt-contrib-concat');
