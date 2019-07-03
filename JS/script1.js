@@ -34,6 +34,14 @@ if (!ingredient || ingredient.text == ""){
 }
 });
 
+app.put('/:ingredientId',function(req,res) {
+
+  var ingredientId = request.params.ingredientId;
+  var text = request.body.text;
+
+
+});
+
 app.get ('/skate', function(req,res) {
     res.send('Skate or die!');
 });
