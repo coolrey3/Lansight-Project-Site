@@ -37,6 +37,23 @@ app.post('/', function(req, res) {
   }
 });
 
+
+app.delete('/', function(req,res){
+  var ingredient = req.body;
+  // ingredients.pop(ingredient);
+
+  for (x = ingredients.length;x > 0;x--) {
+    // var y = /;
+    if (ingredient.text == ingredients[x].text) {
+      ingredients.splice(x,1);
+      break;
+    }
+    // console.log(y);
+
+  }
+  res.status(200).send(ingredients);
+});
+
 app.put('/:ingredientId', function(req, res) {
 
   var ingredientId = request.params.ingredientId;
