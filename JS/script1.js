@@ -24,7 +24,7 @@ app.get ('/', function(request,response) {
     response.send(ingredients);
 });
 
-app.post('/', function(req,res){
+app.post('/ingredient/add', function(req,res){
 var ingredient = req.body;
 if (!ingredient || ingredient.text == ""){
   res.status(500).send({error:"Your ingredient must have a name"});
@@ -34,7 +34,7 @@ if (!ingredient || ingredient.text == ""){
 }
 });
 
-app.put('/:ingredientId',function(req,res) {
+app.put('/ingredient/:ingredientId',function(req,res) {
 
   var ingredientId = request.params.ingredientId;
   var text = request.body.text;
